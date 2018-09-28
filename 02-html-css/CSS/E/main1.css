@@ -1,0 +1,26 @@
+.blue {
+    background: blue;
+    justify-content: flex-start;
+}
+
+.red {
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.green {
+    background: rgb(123, 182, 123);
+    justify-content: center;
+   
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}

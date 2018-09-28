@@ -1,0 +1,25 @@
+.blue {
+    background: blue;
+    float: left;
+
+}
+
+.red {
+    background: red;
+    clear:left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.green {
+    background: green;
+    float: right;
+    clear: right;
+
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    display: block;
+}
