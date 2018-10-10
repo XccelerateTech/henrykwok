@@ -1,5 +1,5 @@
 document.getElementById('learn-more'.addEventListener("click", function() {
-	let overlay = document.getElementById('banner-overlay');
+	let overlay = document.getElementById('bg-overlay');
 	if (overlay) {
 		overlay.remove();
     }
@@ -12,8 +12,8 @@ document.getElementById('learn-more'.addEventListener("click", function() {
 
 let iconclick = document.getElementsByClassName('icon-imgs');
 
-for (let info of icon) {
-    iconclick.addEventListener('mouseenter', function () {
+for (let icon of col-6) {
+    iconclick.addEventListener('mouseenter', function(){
         this.style.height = "170px";
         this.style.width = "170px";
     });
@@ -22,4 +22,4 @@ for (let info of icon) {
         this.style.height = "112px";
         this.style.width = "112px";
     });
-}
+};
