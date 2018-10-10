@@ -13,7 +13,7 @@ class Monster {
       console.log ("Monster dead");
     }
   }
-  
+
   const monster1 = new Monster ("XYC", 100);
   function hero() {
     let damage = Math.floor(Math.random() * (20 - 5 + 1)) + 5;

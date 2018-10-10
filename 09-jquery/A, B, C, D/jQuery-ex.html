@@ -10,7 +10,7 @@
     <div id="content">
         <section class="sections" id="new-contact">
             <h1>Create New Contact</h1>
-            <form id="form1">
+            <form id="form1"  class='contact-form'>
                 <div id="row-name">
                     <input type='text' name="name" placeholder="Name" class="form-name"/>
                 </div>
@@ -35,17 +35,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="row">
+                    <tr class="row" id='row-0'>
                         <td>Sam</td>
                         <td>123456789</td>
                         <td>sam@gmail.com</td>
                     </tr>
-                    <tr class="row">
+                    <tr class="row" id='row-1'>
                         <td>Tom</td>
                         <td>987654321</td>
                         <td>tom@gmail.com</td>
                     </tr>
-                    <tr class="row">
+                    <tr class="row" id='row-2'>
                         <td>Nadim</td>
                         <td>54678292</td>
                         <td>nadim@gmail.com</td>
@@ -53,13 +53,32 @@
                 </tbody>
             </table>
         </section>
+        <section class="sections" id="update-contact">
+            <h1>Update Contact List</h1>
+            <form id="form2" class='contact-form'>
+                <div id="row-name">
+                    <input type='text' name="name" placeholder="Name" class="update-name"/>
+                </div>
+                <div id="row-phone">
+                    <input type='text' name="phone" placeholder="Telephone Number" class="update-phone"/>
+                </div>
+                <div id="row-email">
+                    <input type='text' name="email" placeholder="Email" class="update-email"/>
+                </div>
+                <div id="row-submit">
+                    <input type="submit" value="submit" />
+                </div>
+            </form>
+        </section>
     </div>
     <footer>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
     <script type="text/javascript" src="D.js"></script>
     <script type="text/javascript">
-        $('table').append('<tr><td>Peter</td><td>123456789</td><td>peter@gmail.com</td></tr>');
+        $('table').append('<tr class = row><td>Peter</td><td>123456789</td><td>peter@gmail.com</td></tr>');
 
         $('#row-submit').append('<input type="reset" value="clear"/>');
 
