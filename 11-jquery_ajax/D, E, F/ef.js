@@ -43,6 +43,7 @@ $(function(){
                     let previousSunrise = pastSunrises[0];
                     let previousSunset = pastSunset[0];
 
+                    //Show the difference on the html page
                     $('#times').append("The time difference between previous sunrise and now is "+ toHHMMSS(now-previousSunrise - 86400*1000)+'<br/>');
 
                     $('#times').append("The time difference between previous sunset and now is "+ toHHMMSS(now-previousSunset)+'<br/>');

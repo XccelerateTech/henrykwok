@@ -1,0 +1,29 @@
+#gameboard {
+    width: 450px;
+    margin: 50px auto 50px auto;
+}
+
+.square {
+    float: left;
+    width: 149px;
+    height: 90px;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 35px;
+}
+
+.bottom {
+    border-bottom: 1px solid black;
+}
+
+.right {
+    border-right: 1px solid black;
+}
+
+.fa-circle {
+    color: red;
+}
+
+.fa-times {
+    color: blue;
+}
