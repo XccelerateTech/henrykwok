@@ -1,7 +1,7 @@
 function processArray(arr, callback) {
     const output = [];
     arr.forEach(function(e){
-      callback(e);;
+      callback(e);
       output.push(callback(e))
     });
     console.log(output);
