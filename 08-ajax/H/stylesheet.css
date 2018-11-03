@@ -23,6 +23,10 @@
     position: absolute;
 }
 
+.heading {
+    text-align: center;
+}
+
 h1 {
   color: #ffffff;
   font-size: 40px;
