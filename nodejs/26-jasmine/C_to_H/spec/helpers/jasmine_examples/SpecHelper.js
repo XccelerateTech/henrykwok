@@ -1,9 +1,10 @@
 beforeEach(function () {
     jasmine.addMatchers({
-        tobeInTheSameAlbumAs: function () {
+        toBeInTheSameAlbums: function () {
             return {
-                comapre: function(currentSong, otherSong) {
-                    return{
+                compare: function(currentSong, otherSong) {
+
+                    return {
                         pass: currentSong.album === otherSong.album
                     }
                 }

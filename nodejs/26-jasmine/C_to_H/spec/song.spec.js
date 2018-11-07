@@ -1,22 +1,29 @@
 describe("testing songs", () => { 
-let Song = require('../lib/song');
-let song;
+    let helper = require('../spec/helpers/jasmine_examples/SpecHelper');
+    let Song = require('../lib/song');    
+    let song1;
+    let song2;
+    let song3;
+    let song4;
+    let song5;
 
 
 //Use beforeEach to create new objects before testing.
-beforeEach(function(){
-    song1 = new Song("Waiting Around", "Vacancy EP", "Aisha");
-    song2 = new Song("All is Well", "Sounds Like Help", "Austin Basham");
-    song3 = new Song("Sounds Like Help", "Sounds Like Help", "Austin Basham");
-    song4 = new Song("I Know", "I Am Nice", "Sammy Brue");
-});
+    beforeEach(function(){
+        song1 = new Song("Waiting Around", "Vacancy EP", "Aisha");
+        song2 = new Song("All is Well", "Sounds Like Help", "Austin Basham");
+        song3 = new Song("Sounds Like Help", "Sounds Like Help", "Austin Basham");
+        song4 = new Song("I Know", "I Am Nice", "Sammy Brue");
+        song5 = new Song("Waiting Around", "Vacancy EP", "Aisha");
+    });
 
-afterEach(function(){
-    song1;
-    song2;
-    song3;
-    song4;
-})
+    afterEach(function(){
+        song1;
+        song2;
+        song3;
+        song4;
+        song5;
+    })
     
 //Tests below
     it("song1 should have correct names", () => {        
@@ -45,5 +52,12 @@ afterEach(function(){
         expect(song2.isInSameAlbum(song3)).toBeTruthy();
     });
 
+    it("if they are same album", () => {
+        expect(song1).not.toBeInTheSameAlbums(song3);
+    });
+
+    it("should be the same ", () => {
+        expect(song1).toEqual(song5);
+    });
     
 });
