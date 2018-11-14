@@ -22,6 +22,13 @@ class NoteRouter {
             .catch((err) => res.status(500).json(err));
     })
 
+    router.put('/:id', (req, res) => {
+        return this.noteService.updateNote(req.params.id, req.body.note, req.auth.user)
+            .then(() => this.noteService.listNote(req.auth.user))
+            .then((note) => res.json(note))
+            .catch((err) => res.status(500).json(err));
+    })
+
     router.delete('/:id', (req, res) => {
         return this.noteService.deleteNote(req.params.id, req.auth.user)
             .then(() => this.noteService.listNote(req.auth.user))

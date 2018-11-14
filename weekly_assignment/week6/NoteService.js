@@ -7,7 +7,7 @@ class NoteService {
         this.listNotePromise = this.listNote();
     }
 
-    listNote(user) {
+    listNote() {
         return new Promise((resolve, reject) => {
             fs.readFile(this.filename, 'utf-8', (err, data) => {
                 if(err) {
@@ -20,7 +20,7 @@ class NoteService {
         });
     }
 
-    addNote(note, user) {
+    addNote(note) {
         return new Promise((resolve, reject) => {
             this.listNotePromise.then(() => {
                 this.notes.push(note);
@@ -35,7 +35,22 @@ class NoteService {
         });
     }
 
-    deleteNote(index, user) {
+    updateNote(index, note) {
+        return new Promise((resolve, reject) => {
+            this.listNotePromise.then(() => {
+                this.notes[index] = note;
+                fs.writeFile(this.filename, JSON.stringify(this.notes), (err) => {
+                    if(err) {
+                        reject(err);
+                        return
+                    }
+                    resolve(this.notes);
+                })
+            })
+        })
+    }
+
+    deleteNote(index) {
         return new Promise((resolve, reject) => {
             this.listNotePromise.then(() => {
                 this.notes.splice(index, 1);

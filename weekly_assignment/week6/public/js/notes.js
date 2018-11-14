@@ -39,6 +39,20 @@ $(function() {
         });
     });
 
+    $('#notes').on('blur', 'textarea', function(evt) {
+        beingSaving(evt.currentTarget);
+
+        axios.put('/api/notes/' + $(evt.currentTarget).data('id'), {
+            note: $(evt.currentTarget).val()
+        }).then(function(res) {
+            endSaving(evt.currentTarget);
+            reloadNotes(res.data);
+        }).catch(function(err){
+            endSaving(evt.currentTarget);
+            alert(e);
+        });
+    });
+
     $('#notes').on('click', '.remove', function(evt) {
         beingSaving(evt.currentTarget);
 
