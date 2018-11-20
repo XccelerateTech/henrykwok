@@ -11,6 +11,7 @@ const NoteRouter = require('./NoteRouter');
 const {app} = require('./utils/init-app')();
 
 app.use(basicAuth({
+    challenge: true,
     users:{
         'admin': 'password',
         'Alex': 'man123',

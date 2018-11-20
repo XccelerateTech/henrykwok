@@ -20,6 +20,7 @@ async function commands() {
 
     let rows = [];
 
+    //interpret the csv file into an array
     inputStream.pipe(CSVReadableStream({ parseNumbers: true, parseBooleans: true, trim: true }))
         .on('data', async (row) => {
             rows.push(row);
