@@ -11,7 +11,6 @@ class NoteService {
             .where('user_table.user_name', user);
 
             return query.then((rows) => {
-                console.log(rows);
                 return rows.map(r => ({
                     id: r.id,
                     notes_content: r.notes_content

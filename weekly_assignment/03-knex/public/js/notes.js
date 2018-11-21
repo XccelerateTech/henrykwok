@@ -2,13 +2,14 @@
 let notesTemplate = Handlebars.compile(`
     {{#each notes}}
     <div class = "note">
-        <span class="input"><textarea data-id="{{@index}}">{{this}}</textarea></span>
+        <span class="input"><textarea data-id="{{@index}}">{{notes_content}}</textarea></span>
         <button class="remove btn btn-xs" data-id="{{@index}}"><i class="far fa-trash-alt" aria-hidden="true"></i></button>
     </div>
     {{/each}}
 `);
 
 function reloadNotes(notes) {
+    console.log(notes)
     $('#notes').html(notesTemplate({notes: notes}));
 }
 
